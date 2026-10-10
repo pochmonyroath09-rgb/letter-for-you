@@ -1,0 +1,50 @@
+import streamlit as st
+
+# Custom Page Styling
+st.set_page_config(page_title="A Letter For You", page_icon="💌", layout="centered")
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #fff0f3;
+    }
+    .card {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        color: #2c3e50;
+        font-family: 'Georgia', serif;
+        line-height: 1.8;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.title("💌 A Special Message")
+
+name = st.text_input("Enter your name:", placeholder="Type your name here...")
+
+if name:
+    st.markdown(
+        f"""
+        <div class="card">
+            <h3>Dear {name},</h3>
+            <p>I don't know what you're going through right now, but I want you to know that you are not alone.</p>
+            <p>
+            nh kron tah jg see houy happy jeang ng.<br>
+            Vea min ey teh tae tic tt better hz.<br>
+            Hz rg ng nh kit tha men tae houy teh pbak jit him kor doch knea.<br>
+            I know him nv tae kit pi houy tmd ng.<br>
+            Ber houy pbak jit me kor arom ot sok dae you know.<br>
+            Jg kit rg sby sby oy jrern kom kit ah negative pek.<br>
+            Hz khom rean phg nah houy.<br>
+            Nh jat tuk houy doch jea p'o nh mnk jg.
+            </p>
+            <p style="margin-top: 20px;"><b>With love and care,</b><br>Monyroath</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
